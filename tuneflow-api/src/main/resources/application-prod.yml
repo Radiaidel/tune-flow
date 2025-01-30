@@ -1,0 +1,17 @@
+# application-prod.yml
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+
+logging:
+  level:
+    root: WARN
+    com.aidar.tuneflow: INFO

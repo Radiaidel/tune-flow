@@ -1,0 +1,18 @@
+# application-dev.yml
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/tuneflow
+      database: tuneflow
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+
+logging:
+  level:
+    root: INFO
+    com.aidar.tuneflow: DEBUG

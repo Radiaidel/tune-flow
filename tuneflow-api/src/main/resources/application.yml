@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: dev
+
+jwt:
+  secret: your-256-bit-secret
+  issuer: music-catalog-api
+  expirationInMs: 86400000 # 24 hours
+logging:
+  level:
+    root: DEBUG
+    org.springframework.security: DEBUG
+
+
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+      enabled: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
